@@ -80,4 +80,13 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+private
+
+    def user_params
+      params.require(:user).permit(:name, :job_title)
+    end
+   
+
 end
